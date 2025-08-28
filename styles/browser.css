@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form .btn {
+  padding: 8px 16px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.platform {
+  padding: 8px 16px;
+  background: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 9px;
+  font-size: 1rem;
+}
+
+form .btn:hover {
+  background: #0056b3;
+}
+
+/* Kết quả */
+#results {
+  margin-top: 20px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(17, 143, 227);
+  color: white;
+  text-align: center;
+}
+
+
+img {
+  width: 120px;
+  margin-bottom: 15px;
+  position: absolute;
+  padding: 15px;
+}
+
+#search {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 20px;
+  display: block;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+#results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.game-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.91);
+}
+
+.game-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000000;
+  margin: 0 0 10px 0;
+}
+
+.rating {
+  font-weight: bold;
+}
+
+.rating.green {
+  color: #4caf50; /* good */
+}
+
+.rating.yellow {
+  color: #ffc107; /* average */
+}
+
+.rating.red {
+  color: #f44336; /* bad */
+}
