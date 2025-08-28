@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập & Đăng ký</title>
+  <link rel="stylesheet" href="./styles/register.css">
+</head>
+<body>
+  <header>
+    <img src="./Image/logo.png" alt="Logo">
+  </header>
+
+  <div class="container">
+    <div class="form-box">
+      <!-- Login Form -->
+      <form id="loginForm" class="form active">
+        <h2>Đăng nhập</h2>
+        <input type="text" id="loginUser" placeholder="Tên đăng nhập" required>
+        <input type="password" id="loginPass" placeholder="Mật khẩu" required>
+        <button type="submit">Đăng nhập</button>
+        <p>Bạn chưa có tài khoản? <a href="#" id="showRegister">Đăng ký ngay</a></p>
+      </form>
+
+      <!-- Register Form -->
+      <form id="registerForm" class="form">
+        <h2>Đăng ký</h2>
+        <input type="text" id="regUser" placeholder="Tên đăng nhập" required>
+        <input type="email" id="regEmail" placeholder="Email" required>
+        <input type="password" id="regPass" placeholder="Mật khẩu" required>
+        <button type="submit">Đăng ký</button>
+        <p>Bạn đã có tài khoản? <a href="#" id="showLogin">Đăng nhập ngay</a></p>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 - Dự án: Trình duyệt game Wii U & 3DS
+  </footer>
+
+  <script src="./js/register.js"></script>
+</body>
+</html>
