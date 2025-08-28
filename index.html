@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang chính</title>
+  <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
-    <header>
-    <img src="./Image/logo.png" alt="">
+  <header>
+    <img src="./Image/logo.png" alt="Logo">
     <h1>Trình duyệt game Wii U & 3DS</h1>
     <p>
       Đây là trang web giúp bạn tìm kiếm và khám phá các tựa game trên hệ máy
       <strong>Nintendo Wii U</strong> và <strong>Nintendo 3DS</strong>.
       Dữ liệu được cung cấp bởi RAWG Video Games Database API.
     </p>
-    <a href="browser.html" class="btn">Đi đến trình duyệt</a>
+    <a href="register.html" class="btn">Đi đến trình duyệt</a>
   </header>
 
+  <section class="recent">
+    <h2>Game mới phát hành</h2>
+    <div id="recentGames" class="games-grid"></div>
+  </section>
+
   <footer>
-    2025 - Dự án: Trình duyệt game Wii U & 3DS
+    © 2025 - Dự án: Trình duyệt game Wii U & 3DS
   </footer>
+
+  <script src="./js/home.js"></script>
 </body>
 </html>
