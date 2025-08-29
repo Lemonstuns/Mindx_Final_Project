@@ -37,14 +37,29 @@ function display(games, platformKey) {
   games.forEach(game => {
     const div = document.createElement("div");
     div.classList.add("game-card");
+    div.style.cursor = "pointer"; // show pointer cursor
+
     div.innerHTML = `
-      <h3>${game.name}</h3>
+      <h3>${escapeHtml(game.name)}</h3>
       <p><strong>Ngày phát hành:</strong> ${game.released || "Không rõ"}</p>
       <p><strong>Nền tảng:</strong> ${PLATFORM_NAMES[platformKey]}</p>
       <p><strong>Đánh giá:</strong> ${game.rating ? game.rating.toFixed(1) + "⭐" : "Chưa có"}</p>`;
+
+    // Navigate to gameinfo.html with game ID on click
+    div.addEventListener("click", () => {
+      window.location.href = `gameinfo.html?id=${game.id}`;
+    });
+
     results.appendChild(div);
   });
 }
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
 
 // ✅ Prevent reload, allow Enter key
 document.getElementById("searchForm").addEventListener("submit", async (e) => {

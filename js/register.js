@@ -74,10 +74,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (user) {
       alert(`Xin chào ${username}, bạn đã đăng nhập thành công!`);
       loginForm.reset();
-      // 👉 Bạn có thể chuyển hướng đến trang chính:
-      // window.location.href = "home.html";
+      window.location.href = "browser.html";
     } else {
       alert("Sai tên đăng nhập hoặc mật khẩu!");
     }
   });
 });
+
+document.getElementById("logo").onclick = function () {
+  window.location.href = "index.html"
+};

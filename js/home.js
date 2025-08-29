@@ -5,21 +5,21 @@ const PLATFORM_IDS = {
   "wiiu": 10
 };
 
-async function fetchRecent() {
+async function fetchPopular() {
   const platformParams = `platforms=${PLATFORM_IDS["3ds"]},${PLATFORM_IDS["wiiu"]}`;
-  const url = `${BASE_URL}?key=${API_KEY}&${platformParams}&ordering=-released&page_size=8`;
+  const url = `${BASE_URL}?key=${API_KEY}&${platformParams}&ordering=-rating&page_size=8`;
   try {
     const res = await fetch(url);
     const data = await res.json();
     return data.results || [];
   } catch (err) {
-    console.error("Error fetching recent games:", err);
+    console.error("Lỗi", err);
     return [];
   }
 }
 
-function renderRecent(games) {
-  const container = document.getElementById("recentGames");
+function renderPopular(games) {
+  const container = document.getElementById("popularGames");
   container.innerHTML = games.map(game => {
     const date = game.released ? game.released : "Không rõ";
     const platformNames = (game.platforms || [])
@@ -39,6 +39,10 @@ function renderRecent(games) {
 }
 
 window.addEventListener("load", async () => {
-  const games = await fetchRecent();
-  renderRecent(games);
+  const games = await fetchPopular(); // Changed function call to fetchPopular
+  renderPopular(games); // Changed function call to renderPopular
 });
+
+document.getElementById("logo").onclick = function () {
+  window.location.href = "index.html"
+};
