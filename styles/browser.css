@@ -76,7 +76,7 @@ form .btn:hover {
 }
 
 footer {
-  position: fixed;
+  position: relative;
   left: 0;
   padding: 10px;
   bottom: 0;
@@ -92,6 +92,11 @@ img {
   margin-bottom: 15px;
   position: absolute;
   padding: 15px;
+}
+
+img:hover {
+  width: 130px;
+  align-items: center;
 }
 
 #search {
@@ -117,7 +122,6 @@ img {
   border-radius: 12px;
   padding: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .game-card:hover {
